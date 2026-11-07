@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>El Universo | Contacto</title>
+ <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+ <a href="index.html" class="brand"><span>🪐</span> EL UNIVERSO</a>
+ <nav>
+  <a href="index.html">Inicio</a>
+  <a href="contenido.html">Galaxias y nebulosas</a>
+  <a href="informacion.html">Curiosidades</a>
+  <a href="contacto.html" class="active">Contacto</a>
+ </nav>
+</header>
+
+<main>
+<section class="page">
+
+ <p class="etiqueta centrado">SIGAMOS EXPLORANDO</p>
+ <h2>✦ Contacto ✦</h2>
+
+ <div class="contacto">
+
+  <article class="tarjeta">
+   <h3>Sobre este proyecto</h3>
+
+   <p>
+    Esta página educativa busca compartir información sobre las
+    galaxias, las nebulosas y las maravillas del universo.
+   </p>
+
+   <p>
+    ¡Gracias por acompañarnos en este viaje por el cosmos!
+   </p>
+
+   <div class="emoji-grande">🪐✨</div>
+  </article>
+
+  <article class="tarjeta">
+   <h3>✉️ Envíanos un mensaje</h3>
+
+   <form class="formulario" id="formulario">
+
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" type="text" placeholder="Tu nombre" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input id="correo" type="email" placeholder="tu@correo.com" required>
+
+    <label for="asunto">Asunto:</label>
+
+    <select id="asunto" required>
+     <option value="">Selecciona una opción</option>
+     <option>Pregunta sobre galaxias</option>
+     <option>Pregunta sobre nebulosas</option>
+     <option>Comentario sobre la página</option>
+     <option>Otro</option>
+    </select>
+
+    <label for="mensaje">Mensaje:</label>
+
+    <textarea
+     id="mensaje"
+     rows="4"
+     placeholder="Escribe tu mensaje..."
+     required></textarea>
+
+    <button class="boton" type="submit">
+     Enviar mensaje ✧
+    </button>
+
+    <p id="respuesta" aria-live="polite"></p>
+
+   </form>
+  </article>
+
+ </div>
+
+ <div class="botones">
+  <a class="boton secundario" href="index.html">
+   ← Volver al inicio
+  </a>
+ </div>
+
+</section>
+</main>
+
+<footer>
+ <p>🪐 EL UNIVERSO | Galaxias y nebulosas</p>
+ <p>Explora, aprende y descubre las maravillas del cosmos ✦</p>
+</footer>
+
+<script>
+document.getElementById("formulario").addEventListener("submit", function(evento) {
+
+ evento.preventDefault();
+
+ const nombre = document.getElementById("nombre").value.trim();
+
+ document.getElementById("respuesta").textContent =
+  "¡Gracias, " + nombre + "! El formulario es una demostración y no envía datos realmente.";
+
+ this.reset();
+
+});
+</script>
+
+</body>
+</html>
